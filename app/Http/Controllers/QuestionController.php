@@ -29,11 +29,18 @@ class QuestionController extends Controller
     {
         //dd($request->all());
 
+        $request->validate([
+		    'nama'  => 'required|max:10',
+		    'email' => ['required','email'],
+		    'pertanyaan' => 'required|max:300|min:8',
+		]);
+
         $data ['nama']       = $request->nama;
         $data ['email']      = $request->email;
         $data ['pertanyaan'] = $request->pertanyaan;
 
         return view('home-question-respon', $data);
+
     }
 
     /**

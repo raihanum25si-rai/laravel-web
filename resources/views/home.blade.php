@@ -166,6 +166,13 @@
                 </ul>
             </div>
         @endif
+
+        @if (session('info'))
+            <div class="alert alert-info">
+                {!! session('info') !!}
+            </div>
+        @endif
+        
         <form action="{{ route('question.store') }}" method="POST">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>

@@ -116,7 +116,7 @@
                 </li>
 
                 <li class="nav-item  active ">
-                    <a href="{{route('pelanggan.index')}}" class="nav-link">
+                    <a href="{{ route('pelanggan.index') }}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -371,15 +371,15 @@
                                     <!-- First Name -->
                                     <div class="mb-3">
                                         <label for="first_name" class="form-label">First name</label>
-                                        <input type="text" id="first_name" class="form-control" name="first_name value="{{ $dataPelanggan->first_name }}"
-                                            required>
+                                        <input type="text" id="first_name" class="form-control" name="first_name"
+                                            value="{{ $dataPelanggan->first_name }}" required>
                                     </div>
 
                                     <!-- Last Name -->
                                     <div class="mb-3">
                                         <label for="last_name" class="form-label">Last name</label>
-                                        <input type="text" id="last_name" class="form-control" name="last_name value="{{ $dataPelanggan->last_name }}"
-                                            required>
+                                        <input type="text" id="last_name" class="form-control" name="last_name"
+                                            value="{{ $dataPelanggan->last_name }}" required>
                                     </div>
                                 </div>
 
@@ -387,7 +387,8 @@
                                     <!-- Birthday -->
                                     <div class="mb-3">
                                         <label for="birthday" class="form-label">Birthday</label>
-                                        <input type="date" id="birthday" class="form-control" name="birthday" value="{{ $dataPelanggan->birthday }}">
+                                        <input type="date" id="birthday" class="form-control" name="birthday"
+                                            value="{{ $dataPelanggan->birthday }}">
                                     </div>
 
                                     <!-- Gender -->
@@ -395,8 +396,11 @@
                                         <label for="gender" class="form-label">Gender</label>
                                         <select id="gender" name="gender" class="form-select" name="gender">
                                             <option selected>Gender</option>
-                                            <option value="Male" {{$dataPelanggan ->gender == 'Male' ? 'selected' : ''}}>Male</option>
-                                            <option value="Female" {{$dataPelanggan ->gender == 'Female' ? 'selected' : ''}}>Female</option>
+                                            <option value="Male"
+                                                {{ $dataPelanggan->gender == 'Male' ? 'selected' : '' }}>Male</option>
+                                            <option value="Female"
+                                                {{ $dataPelanggan->gender == 'Female' ? 'selected' : '' }}>Female
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
@@ -405,18 +409,20 @@
                                     <!-- Email -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="text" id="email" class="form-control" name="email" value="{{ $dataPelanggan->email }}" required>
+                                        <input type="text" id="email" class="form-control" name="email"
+                                            value="{{ $dataPelanggan->email }}" required>
                                     </div>
 
                                     <!-- Phone -->
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone</label>
-                                        <input type="text" id="phone" class="form-control" name="phone" value="{{ $dataPelanggan->phone }}">
+                                        <input type="text" id="phone" class="form-control" name="phone"
+                                            value="{{ $dataPelanggan->phone }}">
                                     </div>
 
                                     <!-- Buttons -->
                                     <div class="">
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                                         <a href="{{ route('pelanggan.index') }}"
                                             class="btn btn-outline-secondary ms-2">Batal</a>
                                     </div>

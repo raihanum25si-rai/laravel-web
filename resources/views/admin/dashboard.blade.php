@@ -115,7 +115,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item  active ">
+                <li class="nav-item {{ request()->routeIs('dashboard.*') ? 'active' : '' }}"">
                     <a href="{{route('pelanggan.index')}}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
@@ -130,7 +130,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" {{ request()->routeIs('pelanggan.*') ? 'active' : '' }}">
                     <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
                         data-bs-toggle="collapse" data-bs-target="#submenu-app">
                         <span>Z

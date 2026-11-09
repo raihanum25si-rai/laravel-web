@@ -25,7 +25,7 @@
                 <p class="mb-0">List data seluruh User</p>
             </div>
             <div>
-                <a href="{{ route('pelanggan.create') }}" class="btn btn-success text-white"><i
+                <a href="{{ route('user.create') }}" class="btn btn-success text-white"><i
                         class="far fa-question-circle me-1"></i>
                     Tambah User</a>
             </div>
@@ -55,7 +55,7 @@
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->password }}</td>
-                                        <td><a href="{{ route('pelanggan.edit', $item->pelanggan_id) }}"
+                                        <td><a href="{{ route('user.edit', $item->id) }}"
                                                 class="btn btn-info btn-sm">
                                                 <svg class="icon icon-xs me-2" data-slot="icon" fill="none"
                                                     stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
@@ -67,7 +67,7 @@
                                                 Edit
                                             </a> </td>
                                         <td>
-                                            <form action="{{ route('pelanggan.destroy', $item->pelanggan_id) }}"
+                                            <form action="{{ route('user.destroy', $item->id) }}"
                                                 method="POST" style="display:inline">
                                                 @csrf
                                                 @method('DELETE')
